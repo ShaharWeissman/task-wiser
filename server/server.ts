@@ -4,10 +4,7 @@ import cors from "cors";
 import express from "express";
 import taskRouter from "./router/task-router";
 import config from "./utils/config";
-import { testConnection } from "./utils/dal_mysql";
-// import dotenv from "dotenv"
-//   //imports
-//  dotenv.config();
+
 
   //create server
   const server = express();
@@ -37,6 +34,5 @@ import { testConnection } from "./utils/dal_mysql";
 
 
   server.listen(config.WebPort, async () => {
-    testConnection();
     console.log(`Listening on the http://localhost:${config.WebPort}`);
   });
